@@ -1,4 +1,4 @@
-# Rennan Directory Structure (treelog)
+# Rennan Directory Structure (treescan)
 
 A CLI tool to list directory structure with plain text output.
 
@@ -7,13 +7,13 @@ A CLI tool to list directory structure with plain text output.
 ### Install globally:
 
 ```bash
-npm install -g treelog
+npm install -g treescan
 ```
 
 ### Run:
 
 ```bash
-    treelog /path/to/directory
+    treescan /path/to/directory
 ```
 
 ## Created by:
