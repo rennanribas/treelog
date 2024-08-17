@@ -1,7 +1,7 @@
 {
   "name": "treescan",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "A CLI tool for scanning directory structures",
   "bin": {
     "treescan": "src/cli.js"
   },
@@ -12,7 +12,11 @@
     "fs": "0.0.1-security",
     "path": "^0.12.7"
   },
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "directory",
+    "scanner"
+  ],
   "author": "rennanribas",
   "license": "ISC"
 }

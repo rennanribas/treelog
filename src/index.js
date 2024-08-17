@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-function logDirectoryStructure(rootDir, prefix = '') {
+function logDirectoryStructure(rootDir, { ignore = [] } = {}, prefix = '') {
   // Print the directory name
   console.log(`${prefix}${path.basename(rootDir)}/`)
 
@@ -13,10 +13,13 @@ function logDirectoryStructure(rootDir, prefix = '') {
     const stats = fs.statSync(itemPath)
 
     if (stats.isDirectory()) {
-      // Recursive call for directories
-      logDirectoryStructure(itemPath, `${prefix}  `)
+      // Skip ignored directories
+      if (!ignore.includes(item)) {
+        // Recursive call for directories
+        logDirectoryStructure(itemPath, { ignore }, `${prefix}  `)
+      }
     } else {
-      // Print files
+      // Print files that are not in the ignore list
       console.log(`${prefix}  - ${item}`)
     }
   })
