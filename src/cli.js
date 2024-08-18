@@ -8,7 +8,15 @@ const [, , rootDir, ...args] = process.argv
 
 // Parse command-line arguments
 const options = {
-  ignore: ['node_modules', '.git', 'build', 'dist', 'public', 'coverage'],
+  ignore: [
+    'node_modules',
+    '.git',
+    'build',
+    'dist',
+    'public',
+    'coverage',
+    '.next',
+  ],
 }
 args.forEach((arg) => {
   if (arg.startsWith('--ignore=')) {
