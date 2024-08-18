@@ -1,6 +1,6 @@
 {
   "name": "treescan",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI tool for scanning directory structures",
   "bin": {
     "treescan": "src/cli.js"
